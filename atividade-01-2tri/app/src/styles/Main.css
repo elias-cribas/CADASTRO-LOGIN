@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Press+Start+2P&display=swap');
+:root {
+    --ascent-color: #111b1f;
+    --background-color: #17252a;
+    --font-color: #a8d8c9;
+    --form-color: #2a3d44;
+    --sub-color: #038058;
+    --button-color: #101a1d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Press Start 2P", cursive;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--background-color);
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-container{
+    background-color: var(--form-color);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 1em;
+    margin: 2em;
+    position: relative;
+}
+
+.form-container form>input,button{
+    display: block;
+}

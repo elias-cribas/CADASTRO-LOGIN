@@ -1,4 +1,5 @@
 import { MouseEventHandler, useState } from "react"
+import "../styles/Main.css"
 
 export default function () {
   const [name, setName] = useState("___")
