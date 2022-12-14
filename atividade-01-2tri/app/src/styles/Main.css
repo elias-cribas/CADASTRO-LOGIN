@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 :root {
     --ascent-color: #111b1f;
     --background-color: #17252a;
@@ -14,29 +15,104 @@
 
 
 body {
-    font-family: "Press Start 2P", cursive;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background-color: var(--background-color);
+    font-family: Poppins;
+    height: 100%;
+    width: 100vw;
+    overflow-y: hidden; 
+    overflow-x: hidden;
+}
+
+.bg{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+    background: linear-gradient(359deg, #ba00ff, #0f90a5);
+    background-size: 400% 400%;
+
+    -moz-animation: AnimationName 13s ease infinite;
+    animation: AnimationName 13s ease infinite;
+    z-index: -999;
+}
+
+@-moz-keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
 }
 
 .form-container{
+    background-color: #101a1d;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.76);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+
+    max-width: 450px;
+    width: 100%;
+    height: 50vh;   
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 
-.form-container{
-    background-color: var(--form-color);
+.form-container form>input,button,h1{
+    border: none;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    padding: 1em;
-    margin: 2em;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
 }
 
-.form-container form>input,button{
-    display: block;
+h1{
+    color: #ca69ca;
+    margin-bottom: 20px;
+}
+
+input{
+    color: #ca69ca;
+    background-color: #1d2a2e;
+    outline: none;
+    font-family: Poppins;
+    width: 250px;
+    padding: 15px;
+}
+input[type=text]:-moz-placeholder{
+    color: #ca69ca;
+    background-color: #1d2a2e;
+}
+
+button{
+    background-color: #010101;
+    font-family: Poppins;
+    font-size: 12px;
+    width: 100px;
+    padding: 10px;
+    cursor: pointer;
+    color: #ca69ca;
+}
+
+button:hover{
+    background-color: #a93f90;
+    color: #010101;
+}
+
+button:active{
+    background-color: #f1aaf1;
 }

@@ -33,6 +33,7 @@ export default function ({ setRoute }: { setRoute: Dispatch<SetStateAction<strin
   }
 
   return <>
+  <div className="bg"></div>
   <div className = "form-container">
   <form onSubmit={enviarDados}>
       <h1>Cadastro</h1>
